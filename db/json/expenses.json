@@ -1,0 +1,8 @@
+{
+	"claimerName": { "type": "String", "required": true, "title": "First Name", "showForm": false },
+	"claimerId": { "type": "String", "required": true, "title": "First Name", "showForm": false },
+	"expenseDate": { "type": "Date", "required": true, "title": "Date", "showForm": true },
+	"description": { "type": "String", "required": true, "title": "Description", "showForm": true },
+	"amount": { "type": "Number", "required": true, "title": "Amount", "showForm": true },
+	"approved": { "type": "Boolean", "required": true, "title": "Approved", "showForm": false }
+}

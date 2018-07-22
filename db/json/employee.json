@@ -1,0 +1,4 @@
+{
+	"firstName": { "showForm": true, "type": "String", "required": true, "title": "First Name" },
+	"lastName": { "showForm": true, "type": "String", "required": true, "title": "Last Name" }
+}
