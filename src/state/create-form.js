@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
-import { kea } from 'kea'
-import { put, call } from 'redux-saga/effects'
+import PropTypes from 'prop-types';
+import { kea } from 'kea';
+import { put, call } from 'redux-saga/effects';
 
-const noop = () => ({})
+const noop = () => ({});
 
 const createForm = (options) => {
   const propType = options.propTypes ? PropTypes.shape(options.propTypes) : PropTypes.object;
@@ -15,7 +15,7 @@ const createForm = (options) => {
 
   return kea({
     actions: () => ({
-      initValue: (fields, handelSubmitForm) => ({fields, handelSubmitForm }),
+      initValue: (fields, handelSubmitForm) => ({ fields, handelSubmitForm }),
       setValue: (key, value) => ({ key, value }),
       setValues: values => ({ values }),
 
@@ -29,17 +29,18 @@ const createForm = (options) => {
         [actions.initValue]: (state, payload) => {
           console.log(state);
           return ({
-          ...state,
-          ...payload.fields,
-          fields: Object.keys(payload.fields),
-          handelSubmitForm: payload.handelSubmitForm,
-        })},
+            ...state,
+            ...payload.fields,
+            fields: Object.keys(payload.fields),
+            handelSubmitForm: payload.handelSubmitForm,
+          });
+        },
 
         [actions.setValue]: (state, payload) => {
           console.log('payload.value');
           console.log(state);
           console.log(payload.value);
-          return Object.assign({}, state, { [payload.key]: payload.value })
+          return Object.assign({}, state, { [payload.key]: payload.value });
         },
 
         [actions.setValues]: (state, payload) =>
@@ -69,7 +70,7 @@ const createForm = (options) => {
 
       hasErrors: [
         () => [selectors.allErrors],
-        (allErrors) => Object.values(allErrors).filter(k => k).length > 0,
+        allErrors => Object.values(allErrors).filter(k => k).length > 0,
         PropTypes.bool,
       ],
 

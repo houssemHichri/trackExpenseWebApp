@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { NavBar } from './components';
+import NavBar from './components/NavBar';
 import routes from './../shared/routes';
 
 const App = () => (

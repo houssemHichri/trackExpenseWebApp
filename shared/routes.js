@@ -1,5 +1,4 @@
-import React from 'react';
-import { ExpensesList, Expenses, Home, MonthState, ExpensesManager } from './../src/pages';
+import { ExpensesList, Home, ExpensesManager } from './../src/pages';
 
 const routes = [
   {
@@ -21,7 +20,7 @@ const routes = [
     path: '/expensesEdit/:target/:exTarget',
     exact: true,
     Component: ExpensesManager,
-  }
+  },
 ];
 
 export default routes;
